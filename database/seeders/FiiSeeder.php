@@ -15,16 +15,19 @@ class FiiSeeder extends Seeder
      */
     public function run()
     {
-        DB::table(Fii::TABLE_NAME)->insert(
+        DB::table(Fii::TABLE_NAME)->insert([
             [
                 'fii_cod' => 'MXRF11',
                 'fii_price' => '10.28'
             ],
-
             [
                 'fii_code' => 'SPTW11',
                 'fii_price' => '52.30'
+            ],
+            [
+                'fii_code' => 'MCCI11',
+                'fii_price' => '102.25'
             ]
-        );
+        ]);
     }
 }

@@ -20,6 +20,7 @@ class CreateFiisTable extends Migration
             $table->float(Fii::FILLABLE[1]);
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
