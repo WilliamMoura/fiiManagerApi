@@ -23,4 +23,20 @@ class FiiController extends Controller
         );
 
     }
+
+    public function store(Request $request)
+    {
+        return response()->json(
+            $this->repository->store($request->all()),
+            201
+        );
+    }
+
+    public function update(Request $request, int $id)
+    {
+        return response()->json(
+            $this->repository->update($id, $request->all()),
+            200
+        );
+    }
 }

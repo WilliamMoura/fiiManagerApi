@@ -30,3 +30,5 @@ Route::middleware(['apiJWT'])->group(function () {
 });
 
 Route::get('fiis', [FiiController::class, 'index']);
+Route::post('fiis', [FiiController::class, 'store']);
+Route::put('/fiis/{id}', [FiiController::class, 'update']);
